@@ -108,7 +108,7 @@ const Navbar = ({
                   setIsOpen(false);
                 }}
               >
-                Contact
+                Contac
               </a>
             </div>
           </div>
