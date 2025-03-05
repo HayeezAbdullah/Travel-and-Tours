@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 const Navbar = ({
@@ -15,46 +14,43 @@ const Navbar = ({
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <Link to="/" className="text-2xl font-bold text-blue-600">
+          <a href="/" className="text-2xl font-bold text-blue-600">
             TravelX
-          </Link>
+          </a>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-6">
-            <Link
-              to="/"
+            <a
+              href="/"
               className="hover:text-blue-500 transition"
               onClick={triggerHome}
             >
               Home
-            </Link>
-            <Link
-              to="/about"
+            </a>
+            <a
+              href="/about"
               className="hover:text-blue-500 transition"
               onClick={triggerabt}
             >
               About
-            </Link>
-            <Link
-              to="/tour-packages"
+            </a>
+            <a
+              href="/tour-packages"
               className="hover:text-blue-500 transition"
               onClick={triggerTourpac}
             >
               Tour Packages
-            </Link>
-            <Link
-              to="/guide-vehicle"
-              className="hover:text-blue-500 transition"
-            >
+            </a>
+            <a href="/guide-vehicle" className="hover:text-blue-500 transition">
               Guide & Vehicle
-            </Link>
-            <Link
-              to="/contact"
+            </a>
+            <a
+              href="/contact"
               className="hover:text-blue-500 transition"
               onClick={triggerContact}
             >
               Contact
-            </Link>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -70,8 +66,8 @@ const Navbar = ({
         {isOpen && (
           <div className="md:hidden bg-white shadow-md rounded-lg">
             <div className="flex flex-col space-y-4 p-4">
-              <Link
-                to="/"
+              <a
+                href="/"
                 className="hover:text-blue-500"
                 onClick={() => {
                   triggerHome();
@@ -79,9 +75,9 @@ const Navbar = ({
                 }}
               >
                 Home
-              </Link>
-              <Link
-                to="/about"
+              </a>
+              <a
+                href="/about"
                 className="hover:text-blue-500"
                 onClick={() => {
                   triggerabt();
@@ -89,23 +85,23 @@ const Navbar = ({
                 }}
               >
                 About
-              </Link>
-              <Link
-                to="/tour-packages"
+              </a>
+              <a
+                href="/tour-packages"
                 className="hover:text-blue-500"
                 onClick={() => setIsOpen(false)}
               >
                 Tour Packages
-              </Link>
-              <Link
-                to="/guide-vehicle"
+              </a>
+              <a
+                href="/guide-vehicle"
                 className="hover:text-blue-500"
                 onClick={() => setIsOpen(false)}
               >
                 Guide & Vehicle
-              </Link>
-              <Link
-                to="/contact"
+              </a>
+              <a
+                href="/contact"
                 className="hover:text-blue-500"
                 onClick={() => {
                   triggerContact();
@@ -113,7 +109,7 @@ const Navbar = ({
                 }}
               >
                 Contact
-              </Link>
+              </a>
             </div>
           </div>
         )}
