@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 const Navbar = ({
@@ -14,43 +15,46 @@ const Navbar = ({
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <a to="/" className="text-2xl font-bold text-blue-600">
+          <Link to="/" className="text-2xl font-bold text-blue-600">
             TravelX
-          </a>
+          </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-6">
-            <a
-              to="Home"
+            <Link
+              to="/"
               className="hover:text-blue-500 transition"
               onClick={triggerHome}
             >
               Home
-            </a>
-            <a
-              to="/About"
+            </Link>
+            <Link
+              to="/about"
               className="hover:text-blue-500 transition"
               onClick={triggerabt}
             >
               About
-            </a>
-            <a
-              to="/Tour packages"
+            </Link>
+            <Link
+              to="/tour-packages"
               className="hover:text-blue-500 transition"
               onClick={triggerTourpac}
             >
-              TourPackages
-            </a>
-            <a to="/Guide & Vehicle" className="hover:text-blue-500 transition">
-              Guide&Vehicle
-            </a>
-            <a
+              Tour Packages
+            </Link>
+            <Link
+              to="/guide-vehicle"
+              className="hover:text-blue-500 transition"
+            >
+              Guide & Vehicle
+            </Link>
+            <Link
               to="/contact"
               className="hover:text-blue-500 transition"
               onClick={triggerContact}
             >
               Contact
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -66,8 +70,8 @@ const Navbar = ({
         {isOpen && (
           <div className="md:hidden bg-white shadow-md rounded-lg">
             <div className="flex flex-col space-y-4 p-4">
-              <a
-                to="Home"
+              <Link
+                to="/"
                 className="hover:text-blue-500"
                 onClick={() => {
                   triggerHome();
@@ -75,9 +79,9 @@ const Navbar = ({
                 }}
               >
                 Home
-              </a>
-              <a
-                to="/About"
+              </Link>
+              <Link
+                to="/about"
                 className="hover:text-blue-500"
                 onClick={() => {
                   triggerabt();
@@ -85,22 +89,22 @@ const Navbar = ({
                 }}
               >
                 About
-              </a>
-              <a
-                to="/Tour packages"
+              </Link>
+              <Link
+                to="/tour-packages"
                 className="hover:text-blue-500"
                 onClick={() => setIsOpen(false)}
               >
-                TourPackages
-              </a>
-              <a
-                to="/Guide & Vehicle"
+                Tour Packages
+              </Link>
+              <Link
+                to="/guide-vehicle"
                 className="hover:text-blue-500"
                 onClick={() => setIsOpen(false)}
               >
-                Guide&Vehicle
-              </a>
-              <a
+                Guide & Vehicle
+              </Link>
+              <Link
                 to="/contact"
                 className="hover:text-blue-500"
                 onClick={() => {
@@ -109,7 +113,7 @@ const Navbar = ({
                 }}
               >
                 Contact
-              </a>
+              </Link>
             </div>
           </div>
         )}
